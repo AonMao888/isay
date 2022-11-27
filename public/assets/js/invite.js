@@ -6,7 +6,7 @@ const roomapi = "https://raw.githubusercontent.com/AonMao888/service/main/isayro
 const url = new URL(glink);
 const gid = url.searchParams.get('gid');
 
-link.innerHTML = '?gid='+gid;
+link.innerHTML = 'https://isay.vercel.app/?gid='+gid;
 qrcode.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${link.innerHTML}`;
 
 if(gid){
