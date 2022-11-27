@@ -1,0 +1,561 @@
+:root{
+    --color: #333;
+    --background: #fff;
+}
+.material-symbols-outlined{
+    user-select: none;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+    height: 100vh;
+}
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #eee;
+    height: 59px;
+    background: rgba(238, 238, 238, 0.474);
+}
+nav a{
+    text-decoration: none;
+}
+nav .logo{
+    margin: 2px 9px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+nav .logo h1{
+    margin: 3px;
+    color: royalblue;
+    font-size: 36px;
+}
+nav .logo span{
+    color: rgb(229, 0, 0);
+}
+nav .i .material-symbols-outlined{
+    margin: 5px;
+    font-size: 23px;
+    color: royalblue;
+    cursor: pointer;
+    transform: scale(0.5s);
+    transition: 0.5s;
+    display: none;
+}
+nav .i .material-symbols-outlined:active{
+    transform: scale(0.91);
+}
+.li{
+    display: flex;
+    align-items: center;
+    margin: 1px 9px;
+}
+.li button{
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1px 9px;
+    font-size: 14px;
+}
+.li button .material-symbols-outlined{
+    font-size: 27px;
+}
+.li button:nth-child(1) .material-symbols-outlined{
+    color: rgb(232, 197, 2);
+}
+.li button:nth-child(2) .material-symbols-outlined{
+    color: rgb(0, 172, 0);
+}
+.li button p{
+    font-size: 14px;
+    margin: 0;
+}
+.container{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    height: calc(100vh - 61px);
+}
+.menu{
+    min-width: 291px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.menu h1{
+    margin: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: dimgray;
+    font-size: 29px;
+}
+.i{
+    display: flex;
+    align-items: center;
+    width: max-content;
+}
+.menu h1 span{
+    margin: 4px;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 7px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.5s;
+    color: var(--color);
+}
+.menu h1 span:nth-child(1){
+    color: dimgray;
+    font-weight: bold;
+}
+.menu h1 span:nth-child(2){
+    color:rgb(94, 181, 0);
+    font-weight: bold;
+}
+.menu h1 span:hover{
+    background: #eee;
+}
+#closemenu{
+    display: none;
+}
+.menu a{
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+    transition: 0.5s;
+    padding: 9px 0;
+}
+.menu a:hover{
+    background: rgba(164, 164, 164, 0.31);
+}
+.menu a img{
+    width: 49px;
+    height: 49px;
+    margin-right: 5px;
+    user-select: none;
+    border-radius: 7px;
+    margin-left: 9px;
+    object-fit: cover;
+    object-position: center;
+}
+.menu a h1{
+    display: flex;
+    flex-direction: column;
+    width: 99%;
+    align-items: flex-start;
+    margin: 3px;
+    color: royalblue;
+    font-size: 24px;
+}
+.menu a h1 p{
+    color: var(--color);
+    font-size: 14px;
+    margin: 1px;
+}
+.chat{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.head{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3px auto;
+}
+.log{
+    display: flex;
+    align-items: center;
+    margin: 2px 9px;
+}
+.log img{
+    width: 42px;
+    height: 42px;
+    margin-right: 5px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    user-select: none;
+    border: 3px solid royalblue;
+}
+.log h1{
+    display: flex;
+    flex-direction: column;
+    margin: 3px;
+    color: royalblue;
+    font-size: 24px;
+}
+.log h1 p{
+    margin: 1px;
+    font-size: 29px;
+}
+.log h1 span{
+    font-size: 12px;
+    color: var(--color);
+    margin: 0;
+}
+.more{
+    display: flex;
+    align-items: center;
+    margin: 1px 8px;
+}
+.more span{
+    margin: 2px 5px;
+    cursor: pointer;
+}
+.more span:nth-child(1){
+    color: rgb(232, 197, 2);
+}
+.more span:nth-child(2){
+    color: var(--color);
+}
+.more .ed{
+    margin: 8px 11px;
+    font-size: 17px;
+    color: var(--color);
+}
+.allmsg{
+    background: url('https://gitlab.com/shan32922/allimg/-/raw/main/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    margin-bottom: 63px;
+}
+.msg{
+    width: 100%;
+    display: flex;
+}
+.out{
+    justify-content: right;
+}
+.out .tt{
+    align-items: flex-end;
+}
+.in{
+    justify-content: left;
+}
+.in .tt{
+    align-items: flex-start;
+}
+.msg .tt{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    max-width: 69%;
+    min-width: 159px;
+    background:var(--background);
+    margin: 5px 9px;
+    padding: 9px;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+}
+.msg .tt p{
+    margin: 5px;
+    font-size: 17px;
+    color: var(--color);
+    max-height: 423px;
+    overflow: hidden;
+    overflow-y: scroll;
+    word-break: break-all;
+}
+.msg .tt p::-webkit-scrollbar{
+    display: block;
+    width: 5px;
+    background: transparent;
+}
+.msg .tt p::-webkit-scrollbar-thumb{
+    background: royalblue;
+    border-radius: 9px;
+}
+.d{
+    display: flex;
+    width: 99%;
+    border-top: 2px solid #eee;
+    padding-top: 5px;
+}
+.d h1{
+    background: aqua;
+    color: var(--background);
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    align-items: center;
+    user-select: none;
+    margin: 1px;
+    border-radius: 50%;
+    font-size: 29px;
+}
+.d h2{
+    display: flex;
+    flex-direction: column;
+    margin: 1px;
+    margin-left: 5px;
+    font-size: 24px;
+    color: royalblue;
+}
+.d h2 span{
+    font-size: 12px;
+    color: var(--color);
+}
+.out .tt{
+    border-bottom-left-radius: 9px;
+}
+.in .tt{
+    border-bottom-right-radius: 9px;
+}
+.input{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: var(--background);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.input .material-symbols-outlined{
+    margin: 8px 3px;
+    cursor: pointer;
+}
+.input .material-symbols-outlined:nth-child(1){
+    color: teal;
+    font-size: 24px;
+    margin-left: 9px;
+}
+.input .material-symbols-outlined:nth-child(2){
+    color: darkmagenta;
+    font-size: 24px;
+}
+.input input{
+    width: 100%;
+    padding: 5px 7px;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: var(--color);
+    border-bottom: 2px solid teal;
+}
+.input .send{
+    font-size: 29px;
+    color: royalblue;
+    transform: scale(1);
+    transition: 0.5s;
+    margin-right: 9px;
+}
+.input .send:active{
+    transform: scale(0.89);
+}
+.info{
+    min-width: 291px;
+}
+.info h1{
+    margin: 4px;
+    color: royalblue;
+    font-size: 27px;
+    margin-top: 9px;
+}
+.div{
+    background: #eee;
+    width: 91%;
+    margin: 3px auto;
+    padding: 7px;
+    margin-top: 15px;
+    border-radius: 9px;
+}
+.div p{
+    margin: 5px;
+    font-size: 17px;
+    color: var(--color);
+}
+.moremenu{
+    position: fixed;
+    right: -519px;
+    top: 0;
+    background: var(--background);
+    border-left: 3px solid #eee;
+    width: 291px;
+    height: 100vh;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.moremenu h3{
+    margin: 0;
+    background: linear-gradient(159deg,blue,rgb(255, 85, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 29px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px 2px 3px rgba(105, 105, 105, 0.284);
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+.moremenu h3 span{
+    margin: 3px 9px;
+    cursor: pointer;
+    background: linear-gradient(159deg,blue,rgb(255, 85, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+.in{
+    background: var(--background);
+    width: 96%;
+    margin: 0 auto;
+    box-shadow: 1px 2px 3px rgba(105, 105, 105, 0.43);
+    margin-top: 9px;
+    border-radius: 9px;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+.in img{
+    width: 100%;
+    height: 123px;
+    object-fit: cover;
+    object-position: center;
+    user-select: none;
+}
+.in .d{
+    display: flex;
+    align-items: center;
+}
+.in .d img{
+    width: 36px;
+    height: 36px;
+    margin: 0 7px;
+    user-select: none;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.moremenu a{
+    width: 92%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: inset 1px 2px 3px rgba(202, 202, 202, 0.644),1px 2px 3px rgba(105, 105, 105, 0.644);
+    border-radius: 7px;
+    background: var(--background);
+    text-decoration: none;
+    margin: 9px auto;
+    padding: 9px 5px;
+}
+.moremenu a .material-symbols-outlined{
+    font-size: 27px;
+    color: royalblue;
+}
+.moremenu a p{
+    margin: 4px;
+    font-size: 19px;
+    color: var(--color);
+}
+.qrdiv{
+    width: 96%;
+    margin: 9px auto;
+    border-radius: 9px;
+    background: var(--background);
+    box-shadow: inset 1px 2px 3px rgba(202, 202, 202, 0.644),1px 2px 3px rgba(105, 105, 105, 0.644);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 7px;
+}
+.qrdiv p{
+    margin: 5px;
+    width: 96%;
+    font-size: 17px;
+    color: var(--color);
+    margin-top: 9px;
+}
+.qrdiv .img{
+    width: 159px;
+    height: 159px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+    user-select: none;
+}
+
+@media(max-width:969px){
+    .menu h1{
+        font-size: 24px;
+    }
+    .info h1{
+        font-size: 24px;
+    }
+    .log h1{
+        font-size: 15px;
+    }
+    .menu{
+        min-width: 259px;
+    }
+    .info{
+        min-width: 259px;
+    }
+}
+@media(max-width:969px){
+    .info{
+        display: none;
+    }
+}
+@media(max-width:678px){
+    .menu{
+        position: fixed;
+        left: -639px;
+        top: 0;
+        z-index: 1;
+        background: var(--background);
+        height: 100vh;
+        transition: 0.5s;
+        border-right: 3px solid #eee;
+    }
+    .menu a img{
+        width: 42px;
+        height: 42px;
+    }
+    .menu a h1{
+        font-size: 21px;
+    }
+    .menu a p{
+        font-size: 11px;
+    }
+    #closemenu{
+        display: block;
+    }
+    nav .i .material-symbols-outlined{
+        display: block;
+    }
+}
+@media(max-width:500px){
+    .li button p{
+        display: none;
+    }
+}
